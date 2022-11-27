@@ -9,6 +9,7 @@
     "compile": "tsc",
     "commit": "cz",
     "clean": "rimraf dist",
+    "lint": "./node_modules/.bin/eslint . --ext .ts --resolve-plugins-relative-to .",
     "release": "standard-version",
     "copy-assets": "npx shx cp -Rf src/assets ./dist && npx shx cp -Rf src/robots.txt ./dist/robots.txt",
     "dev": "cross-env NODE_ENV=development nodemon src/index.ts"
