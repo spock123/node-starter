@@ -4,6 +4,13 @@
   "description": "Node server starter project",
   "main": "index.js",
   "scripts": {
+    "build": "npm-run-all clean compile",
+    "build-preserve": "npm run compile",
+    "compile": "tsc",
+    "commit": "cz",
+    "clean": "rimraf dist",
+    "release": "standard-version",
+    "copy-assets": "npx shx cp -Rf src/assets ./dist && npx shx cp -Rf src/robots.txt ./dist/robots.txt",
     "dev": "cross-env NODE_ENV=development nodemon src/index.ts"
   },
   "engines": {
