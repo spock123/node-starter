@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "noImplicitReturns": true,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+        "noUnusedLocals": false,
+        "outDir": "dist",
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "lib": ["ES2021", "DOM"],
+        "target": "ES2021",
+        "paths": {
+            "$lib/*": ["src/lib/*"],
+            "$lib": ["src/lib"],
+            "$types/*": ["src/types/*"],
+            "$types": ["src/types"],
+            "$root": ["src"]
+        }
+    },
+    "compileOnSave": true,
+    "include": ["./src"],
+    "files": ["types.d.ts"],
+    "ts-node": {
+        "swc": true
+    }
+}
