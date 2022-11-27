@@ -1,0 +1,17 @@
+services:
+  payment_service:
+    container_name: payment_service
+    restart: always
+    platform: linux/amd64
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: ${NODE_ENV}
+    volumes:
+      - .:/app
+    command: node dist/index.js
+    ports:
+      - "8100:8100"
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: 8100

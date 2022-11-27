@@ -1,19 +1,20 @@
-import express from 'express';
-import routes from './routes';
+import express from "express";
+import routes from "./routes";
 
-const MODULE = '[Init]';
+const MODULE = "[Init]";
 
 const main = async (props: { port: number | string }) => {
-    console.log(MODULE, 'Creating server');
-    
-    const app = express();
-    app.use(routes);
+  console.log(MODULE, "Creating server");
 
-    app.listen(props.port, () => {
-        console.log(MODULE, `Server listening on port ${props.port}...`);
-    });
+  const app = express();
+  app.use(routes);
+
+  app.listen(props.port, () => {
+    console.log(MODULE, `Server listening on port ${props.port}`);
+    console.log(MODULE, "Environment:", process.env.NODE_ENV);
+  });
 };
 
 main({
-    port: process.env.PORT  || 8100
+  port: process.env.PORT || 8100,
 });
