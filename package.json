@@ -45,6 +45,7 @@
         "prettier": "^2.8.0",
         "rimraf": "^3.0.2",
         "shx": "^0.3.4",
+        "standard-version": "^9.5.0",
         "ts-jest": "^29.0.3",
         "ts-node": "^10.9.1",
         "ts-node-dev": "^2.0.0",
